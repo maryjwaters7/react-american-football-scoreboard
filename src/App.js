@@ -1,7 +1,6 @@
 //TODO: STEP 1 - Import the useState hook.
 import React, { useState } from "react";
 import BottomRow from "./BottomRow";
-import ScoreButtons from "./ScoreButtons";
 import "./App.css";
 
 function App() {
@@ -28,7 +27,28 @@ function App() {
         </div>
         <BottomRow />
       </section>
-     <ScoreButtons />
+      <section className="buttons">
+            <div className="homeButtons">
+                <button className="homeButtons__touchdown"
+                onClick={() => setHome(home + 7)}>
+                    Home Touchdown
+                </button>
+                <button className="homeButtons__fieldGoal"
+                onClick={() => setHome(home + 3)}>
+                    Home Field Goal
+                </button>
+            </div>
+            <div className="awayButtons">
+                <button className="awayButtons__touchdown"
+                onClick={() => setAway(away + 7)}>
+                    Away Touchdown
+                </button>
+                <button className="awayButtons__fieldGoal"
+                onClick={() => setAway(away + 3)}>
+                    Away Field Goal
+                </button>
+            </div>
+      </section>
     </div>
   );
 }
